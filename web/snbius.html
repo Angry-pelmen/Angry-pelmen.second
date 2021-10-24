@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ae</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-box">
+        <div class="logo" >logo</div>
+
+        <div class="nav-box">
+            <nav class="nav">
+                <a href="#" class="link">home</a>
+                <a href="#" class="link">about us</a>
+                <a href="#" class="link">contact us</a>
+            </nav>
+            
+            <button class="btn" id="info">get info</button>
+        </div>
+    </div>
+
+    <div class="home">
+        <div class="home-box">
+            <div class="home-text-box">
+                <div class="title">Ae</div>
+                <div class="filler-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nostrum ut, possimus velit veniam recusandae. Unde debitis dolores, fugiat sapiente quam ex nostrum cum asperiores necessitatibus quae dolorem facilis quos repellat saepe aut provident? Eveniet dicta amet neque non, fuga quo nisi consequatur vero assumenda cupiditate, omnis, similique deserunt dolorum.</div>
+                <button class="btn">learn more</button>
+            </div>
+            <div class="home-image"><img src="1200.png" alt=""></div>
+        </div>
+    </div>
+
+    <div class="overlay">
+        <div class="modal">
+            <div class="m-title">Ae</div>
+            <input type="text" class="inpt" placeholder="Enter the name" id="name">
+            <input type="text" class="inpt" placeholder="Enter the email" id="email">
+            <button class="btn m-btn">Ae</button>
+        </div>
+    </div>
+
+    <script>
+        const button = document.querySelector('#info');
+        const overlay = document.querySelector('.overlay');
+        overlay.onclick = function(event){
+            if (event.target != overlay) return;
+
+            overlay.style.display = 'none';
+        }
+        button.onclick = function(){
+            overlay.style.display = 'flex';
+        }
+        const name = document.querySelector('#name');
+        const email = document.querySelector('#email');
+        const send = document.querySelector('.m-btn');
+
+        send.onclick = function(){
+            console.log(name.value, email.value);
+        }
+    </script>
+</body>
+</html>
